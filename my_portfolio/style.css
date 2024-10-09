@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    max-width: 95%;
+    margin: 0 auto;
+}
+.banner{
+    background-color: white;
+    box-shadow:3px 3px 5px rgba(0, 0, 0, .3) ;
+    padding: 15px 5%;
+}
+.banner-title{
+    font-style: italic;
+    color: #990000;
+}
+nav{
+    background-color: #990000;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    font-weight: bolder;
+    align-items: center;
+    color: white;
+}
+.inside-nav a{
+    color: #990000;
+}
+.inside-nav a:hover{
+    background-color:#2b282841 ;
+    color: #990000;
+}
+nav a:hover{
+    background-color: #2b282841;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+li img{
+    width: 50px;
+}
+.name{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.name a:hover{
+    background-color: #990000;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(20px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, .1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li, .sidebar a{
+    width: 100%;
+}
+.menu{
+    display: none;
+}
+
+.profile, .projects{ 
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile{
+    padding-top: 100px;
+    animation:animate 1s ease-in-out 0.6s 1 forwards;
+}
+@keyframes animate{
+    from{
+        opacity:0;
+        transform:translate(0, 100px);
+        filter:blur(33px);
+    }
+    to{
+        opacity:1;
+        transform:translate(0);
+        filter:blur(0);
+    }
+}
+.profile-img{
+    width: 30%;
+}
+.b-rt{
+    border: 1px solid black;
+}
+.profile-img img{
+    width: 100%;
+}
+.profile-details{
+    width: 65%;
+    margin: auto 0;
+}
+.profile-details h1{
+    font-size: 50px;
+}
+.profile-details .bsc{
+    margin: 0;
+    font-size: 15px;
+    font-style: italic;
+    padding-left: 5px;
+}
+.profile-details ul{
+    list-style: none;
+    padding: 10px;
+    font-size: .7rem;
+}
+.profile .icon{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+.profile .icon a{
+    color: black;
+}
+.profile .icon a:hover{
+    color: #990000;
+}
+.main-section{
+    height: 540px;
+    background-color: rgb(220, 253, 253);
+}
+
+.projects-section{
+    margin: 70px 0;
+}
+.projects .project{
+    margin: 0 2.5px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #990000;
+    width: 33%;
+}
+.project-title h1, .project-title p{
+    text-align: center;
+    color: white;
+}
+.project .icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: white;
+    padding: 20px;
+}
+footer{
+    padding: 30px 0;
+    color: white;
+    width: 100%;
+    background-color: rgb(48, 47, 47);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .icon{
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .icon a{
+    color: white;
+
+}
+footer .icon a:hover{
+    color: rgb(220, 253, 253);
+    
+}
+footer .copyright{
+    padding-top: 20px;
+}
+
+
+
+@media (max-width:750px) {
+    .hide{
+        display: none;
+      }  
+    .menu{
+        display: block;
+      }
+    .profile{
+        flex-direction: column;
+        margin-top: 20px;
+      }
+    .profile-img, .profile-details{
+        width: 100%;
+    }
+    .icon{
+        width: 50%;
+    }
+    .profile-details h1{
+        font-size: 27px;
+    }
+    .profile-details .bsc{
+        float: right;
+        font-size: 10px;
+        margin-top: -20px;
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+    .projects .project{
+        width: 100%;
+        margin: 2.5px auto;
+    }
+}
+@media (max-width:400px) {
+    .sidebar{
+        width: 100%;
+    }
+    .name img{
+        display: none;
+    }
+}
